@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: all 400ms;
+   
+}
+
+.page.active {
+    left: 250px;
+}
+
+header {
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-icon {
+    padding: 1rem;
+}
+
+.nav-icon #menu-icon, 
+.nav-icon.active #close-icon {
+    display: none;
+}
+
+.nav-icon.active #menu-icon,
+.nav-icon #close-icon {
+    display: block;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    z-index: 15;
+    color: black;
+
+}
+
+.hero video {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.hero .overlay {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+ background-color: rgba(235, 186, 186, 0.28);
+
+}
+
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-250px);
+    transition: all 400ms;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #3f87a6);
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu ul {
+    list-style: none;
+    
+}
+
+.menu ul a {
+    color: black;
+    font-size: 1.6rem ;
+    text-decoration: underline;
+}
+
+section.cards{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    /* background-color: #3f87a6; */
+    background: linear-gradient(#3f87a6, #9fd1e7) ;
+}
+
+.card {
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding-bottom: 100px;
+    background-color: rgb(216, 231, 245);
+    border-radius: 10px;
+}
+
+.card img {
+ width: 100%;
+}
+
+.before_card {
+    background-color: #3f87a6;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 250px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card_link {
+    color: black;
+    font-size: 2rem;
+}
